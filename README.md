@@ -57,7 +57,7 @@ Qualitative comparison of drivable area estimation and occupancy detection under
 ![Experimental Results (1)](assets/Experimental%20results%20(1).jpg)
 ![Experimental Results (2)](assets/Experimental%20results%20(2).jpg)
 ![Experimental Results (4)](assets/Experimental%20results%20(4).jpg)
-![Algorithm Architecture](assets/Algorithm Architecture.jpg)
+![Algorithm Architecture](assets/Algorithm%20Architecture.jpg)
 ---
 
 ## License
