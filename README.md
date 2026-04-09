@@ -1,17 +1,79 @@
-# MAD: Informatics-Enhanced Perception in Autonomous Driving
+# MAD-QWT: Informatics-Enhanced Perception in Autonomous Driving
 
-This repository contains the official PyTorch implementation of the paper: **"Integrating Multi-Q Gabor Wavelet and Semantic Modeling for Informatics-Enhanced Perception in Autonomous Driving"**.
+This repository includes the official PyTorch implementation for performing multimodal inference and training with the **MAD framework**, as detailed in our paper: *"Integrating Multi-Q Gabor Wavelet and Semantic Modeling for Informatics-Enhanced Perception in Autonomous Driving"*. 
 
-## 1. Project Structure
-- `main.py`: Main script for training and evaluation.
-- `qwt_core.py`: Implementation of the Multi-Q Gabor Wavelet Transform (QWT) and SRAP/MinIP projections.
-- `data_utils.py`: Scripts for dataset loading and preprocessing.
-- `models/`: Directory for storing pre-trained weights.
-- `images/`: Sample images for quick testing.
+MAD is a robust drivable area segmentation and occupancy-aware risk assessment model that systematically couples monocular vision with Q-factor Wavelet Transform (QWT) enhanced vibration signals to maintain stability under complex and degraded visual conditions.
 
-## 2. Environment Setup
-Create a virtual environment and install the required dependencies:
-```bash
-conda create -n mad_env python=3.8
-conda activate mad_env
+## Acknowledgment 🌟
+
+We would like to express our sincere gratitude to the open-source community, particularly the creators of the **TwinLiteNet** and **ENet** models for their pioneering work in extremely lightweight perception architectures. Their contributions have profoundly impacted the community and provided invaluable baselines for our research. We also thank the creators of the SpaceNet, DeepGlobe, and Cityscapes datasets for providing the foundational data for our evaluations.
+
+## Project Structure
+
+The project is organized as follows:
+
+```text
+├── data/
+│   ├── SpaceNet/
+│   ├── DeepGlobe/
+│   └── Cityscapes/
+├── images/                  # Sample images and demo outputs
+├── models/                  # Network architectures (DeepLabV3+, Faster R-CNN)
+├── weights/                 # Directory for pre-trained .pth weights
+├── src/
+│   ├── main.py              # Main script for training and evaluation
+│   ├── qwt_core.py          # Multi-Q Gabor Wavelet Transform & SRAP/MinIP projection
+│   └── data_utils.py        # Dataset loading and preprocessing scripts
+├── requirements.txt         # Python dependencies
+├── LICENSE
+└── README.md
+
+Requirements
+Python 3.8+
+PyTorch 1.10+ (CUDA supported)
+OpenCV
+SciPy / PyWavelets (for QWT processing)
+Install all dependencies via:
 pip install -r requirements.txt
+
+Usage
+1. Clone this repository
+git clone [https://github.com/wzy7421/MAD-QWT1.git](https://github.com/wzy7421/MAD-QWT1.git)
+cd MAD-QWT1
+
+2. Data Preparation
+Please download the original SpaceNet, DeepGlobe, and Cityscapes datasets from their official sources and place them into the data/ directory.
+Run the preprocessing script to format the labels for drivable area extraction:
+
+Bash
+
+python src/data_utils.py --dataset_path ./data/
+3. Download Pre-trained Weights
+To enable immediate inference and ensure full reproducibility, we provide the pre-trained weights.
+
+Download the mad_best.pth from [Insert Google Drive / Baidu Pan Link Here]
+
+Place the downloaded file into the weights/ directory.
+
+4. Execute Inference
+For evaluation on the test set and generating occupancy grid results, run:
+
+Bash
+
+python src/main.py --mode test --weights weights/mad_best.pth
+Enjoy accurate drivable area detection and physically-consistent risk assessment!
+
+License
+This project is licensed under the MIT License. Feel free to use it in both open-source and commercial applications.
+
+Extras / Citation 📖
+If you find our work or this repository helpful, please consider citing our paper:
+
+代码段
+
+@article{Wang2026MAD,
+  title={Integrating Multi-Q Gabor Wavelet and Semantic Modeling for Informatics-Enhanced Perception in Autonomous Driving},
+  author={Wang, Zhenyu and Wang, Jianmin},
+  journal={Advanced Engineering Informatics},
+  year={2026}
+}
