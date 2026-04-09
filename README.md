@@ -27,3 +27,11 @@ The project is organized as follows:
 ├── requirements.txt         # Python dependencies
 ├── LICENSE
 └── README.md
+
+
+## Requirements
+Python 3.8+
+PyTorch 1.10+ (CUDA supported)
+OpenCV
+SciPy / PyWavelets (for QWT processing)
+Install all dependencies via:
