@@ -37,7 +37,7 @@ python src/data_utils.py --dataset_path ./data/
 ### 2. Pre-trained Weights
 To enable immediate inference and ensure full reproducibility, we have included the pre-trained weights directly in this repository. 
 
-You can find the PyTorch weights (`best.pt`) and the exported ONNX model (`test.onnx`) inside the `model/` directory. No external downloading (e.g., Google Drive) is required.
+You can find the PyTorch weights (`best.pt`) and the exported ONNX model (`test.onnx`) inside the `model/` directory.
 
 
 ### 3. Execute Inference
