@@ -18,7 +18,8 @@ Install all dependencies via:
 
 ```bash
 pip install -r requirements.txt
-Usage
+
+## Usage
 1. Data Preparation
 
 Please download the original SpaceNet, DeepGlobe, and Cityscapes datasets from their official sources and place them into the data/ directory.
@@ -44,7 +45,7 @@ Experimental Results
 
 Qualitative comparison of drivable area estimation and occupancy detection under complex driving scenarios.
 
-License
+## License
 
 This project is licensed under the MIT License. Feel free to use it in both open-source and commercial applications.
 
@@ -58,11 +59,12 @@ If you find our work or this repository helpful, please consider citing our pape
   journal={Advanced Engineering Informatics},
   year={2026}
 }
-Acknowledgment 🌟
+
+## Acknowledgment 🌟
 
 We would like to express our sincere gratitude to the open-source community, particularly the creators of the TwinLiteNet and ENet models for their pioneering work in extremely lightweight perception architectures. Their contributions have profoundly impacted the community and provided invaluable baselines for our research. We also thank the creators of the SpaceNet, DeepGlobe, and Cityscapes datasets for providing the foundational data for our evaluations.
 
-Project Structure
+## Project Structure
 
 The project is organized as follows:
 
