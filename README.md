@@ -29,6 +29,7 @@ The project is organized as follows:
 └── README.md
 
 
+
 ## Requirements
 Python 3.8+
 PyTorch 1.10+ (CUDA supported)
