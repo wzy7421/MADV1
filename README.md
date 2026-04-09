@@ -7,25 +7,16 @@ MAD is a robust drivable area segmentation and occupancy-aware risk assessment m
 
 ## Requirements
 Python 3.8+
-
 PyTorch 1.10+ (CUDA supported)
-
 OpenCV
-
 SciPy / PyWavelets (for QWT processing)
-
 Install all dependencies via:
 
 Bash
 
 pip install -r requirements.txt
 ## Usage
-1. Clone this repository
-Bash
-
-git clone https://github.com/wzy7421/MAD-QWT1.git
-cd MAD-QWT1
-2. Data Preparation
+Data Preparation
 Please download the original SpaceNet, DeepGlobe, and Cityscapes datasets from their official sources and place them into the data/ directory.
 
 Run the preprocessing script to format the labels for drivable area extraction:
