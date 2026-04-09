@@ -48,9 +48,6 @@ For evaluation on the test set and generating occupancy grid results, run:
 ```bash
 python main.py --mode test --weights model/best.pt
 
-
-
-Enjoy accurate drivable area detection and physically-consistent risk assessment!
 ```
 ---
 
