@@ -112,5 +112,3 @@ The project is organized as follows:
 ```
 
 ---
-
-Feel free to modify and adapt this template as needed for your project. The structure includes essential steps for data preparation, model execution, and licensing, and ensures a clean setup for new users.
