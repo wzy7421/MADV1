@@ -39,8 +39,9 @@ To enable immediate inference and ensure full reproducibility, we have included 
 
 You can find the PyTorch weights (`best.pt`) and the exported ONNX model (`test.onnx`) inside the `model/` directory. No external downloading (e.g., Google Drive) is required.
 
-```
+
 ### 3. Execute Inference
+
 For evaluation on the test set and generating occupancy grid results, run:
 
 ```bash
