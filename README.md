@@ -4,6 +4,7 @@ This repository includes the official PyTorch implementation for performing mult
 
 MAD is a robust drivable area segmentation and occupancy-aware risk assessment model that systematically couples monocular vision with Q-factor Wavelet Transform (QWT) enhanced vibration signals to maintain stability under complex and degraded visual conditions.
 
+
 ## Requirements
 Python 3.8+
 
@@ -15,13 +16,23 @@ SciPy / PyWavelets (for QWT processing)
 
 Install all dependencies via:
 
+Bash
+
+pip install -r requirements.txt
 ## Usage
 1. Clone this repository
+Bash
+
+git clone https://github.com/wzy7421/MAD-QWT1.git
+cd MAD-QWT1
 2. Data Preparation
 Please download the original SpaceNet, DeepGlobe, and Cityscapes datasets from their official sources and place them into the data/ directory.
 
 Run the preprocessing script to format the labels for drivable area extraction:
 
+Bash
+
+python src/data_utils.py --dataset_path ./data/
 3. Download Pre-trained Weights
 To enable immediate inference and ensure full reproducibility, we provide the pre-trained weights.
 
@@ -32,18 +43,27 @@ Place the downloaded file into the weights/ directory.
 4. Execute Inference
 For evaluation on the test set and generating occupancy grid results, run:
 
+Bash
+
+python src/main.py --mode test --weights weights/mad_best.pth
 Enjoy accurate drivable area detection and physically-consistent risk assessment!
 
-📊 Experimental Results
+##  Experimental Results
 Qualitative comparison of drivable area estimation and occupancy detection under complex driving scenarios.
 
-📜 License
+## License
 This project is licensed under the MIT License. Feel free to use it in both open-source and commercial applications.
 
-📖 Citation
+## Citation
 If you find our work or this repository helpful, please consider citing our paper:
 
 
+@article{Wang2026MAD,
+  title={Integrating Multi-Q Gabor Wavelet and Semantic Modeling for Informatics-Enhanced Perception in Autonomous Driving},
+  author={Wang, Zhenyu and Wang, Jianmin},
+  journal={Advanced Engineering Informatics},
+  year={2026}
+}
 
 ## Acknowledgment 🌟
 
