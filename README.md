@@ -24,14 +24,17 @@ pip install -r requirements.txt
 ---
 
 ## Usage
-
 ### 1. Data Preparation
-Please download the original SpaceNet, DeepGlobe, and Cityscapes datasets from their official sources and place them into the `data/` directory.
 
+Please download the original datasets from their official sources:
+* [SpaceNet](https://spacenet.ai/spacenet-buildings-dataset-v2/)
+* [DeepGlobe](https://competitions.codalab.org/competitions/18467)
+* [Cityscapes](https://www.cityscapes-dataset.com/)
+
+Place the downloaded datasets into the `datasets/` directory.
 Run the preprocessing script to format the labels for drivable area extraction:
-
 ```bash
-python src/data_utils.py --dataset_path ./data/
+python data_utils.py --dataset_path ./datasets/
 ```
 
 ### 2. Pre-trained Weights (Demo)
@@ -98,7 +101,7 @@ The project is organized as follows:
 ├── images/                  # Sample images and demo outputs
 ├── model/                   # Network architectures and Pre-trained Weights
 │   ├── faster_rcnn.py       # Detection architecture
-│   ├── best.pt              # Pre-trained PyTorch weights
+│   ├── best_demo.pt         # Pre-trained PyTorch weights
 │   └── test.onnx            # Exported ONNX model
 ├── main.py                  # Main script for training and evaluation
 ├── qwt_core.py              # Multi-Q Gabor Wavelet Transform & SRAP/MinIP projection
