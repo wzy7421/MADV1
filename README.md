@@ -18,70 +18,11 @@ Install all dependencies via:
 
 ```bash
 pip install -r requirements.txt
-Usage
+
+## Usage
 1. Data Preparation
 
 Please download the original SpaceNet, DeepGlobe, and Cityscapes datasets from their official sources and place them into the data/ directory.
 
 Run the preprocessing script to format the labels for drivable area extraction:
-
 python src/data_utils.py --dataset_path ./data/
-2. Download Pre-trained Weights
-
-To enable immediate inference and ensure full reproducibility, we provide the pre-trained weights.
-Download the mad_best.pth from [Insert Google Drive / Baidu Pan Link Here]
-Place the downloaded file into the weights/ directory.
-
-3. Execute Inference
-
-For evaluation on the test set and generating occupancy grid results, run:
-
-python src/main.py --mode test --weights weights/mad_best.pth
-
-Enjoy accurate drivable area detection and physically-consistent risk assessment!
-
-Experimental Results
-
-Qualitative comparison of drivable area estimation and occupancy detection under complex driving scenarios.
-
-License
-
-This project is licensed under the MIT License. Feel free to use it in both open-source and commercial applications.
-
-Citation
-
-If you find our work or this repository helpful, please consider citing our paper:
-
-@article{Wang2026MAD,
-  title={Integrating Multi-Q Gabor Wavelet and Semantic Modeling for Informatics-Enhanced Perception in Autonomous Driving},
-  author={Wang, Zhenyu and Wang, Jianmin},
-  journal={Advanced Engineering Informatics},
-  year={2026}
-}
-Acknowledgment 🌟
-
-We would like to express our sincere gratitude to the open-source community, particularly the creators of the TwinLiteNet and ENet models for their pioneering work in extremely lightweight perception architectures. Their contributions have profoundly impacted the community and provided invaluable baselines for our research. We also thank the creators of the SpaceNet, DeepGlobe, and Cityscapes datasets for providing the foundational data for our evaluations.
-
-Project Structure
-
-The project is organized as follows:
-
-├── data/                          # Directory for datasets
-│   ├── SpaceNet/                  # SpaceNet dataset
-│   ├── DeepGlobe/                 # DeepGlobe dataset
-│   └── Cityscapes/                # Cityscapes dataset
-├── images/                        # Sample images and demo outputs
-├── models/                        # Network architectures (DeepLabV3+, Faster R-CNN)
-├── weights/                       # Directory for pre-trained .pth weights
-├── src/                           # Source code
-│   ├── main.py                    # Main script for training and evaluation
-│   ├── qwt_core.py                # Multi-Q Gabor Wavelet Transform & SRAP/MinIP projection
-│   └── data_utils.py              # Dataset loading and preprocessing scripts
-├── requirements.txt               # Python dependencies
-├── LICENSE                        # License file
-└── README.md                      # Project documentation
-
-Feel free to modify and adapt this template as needed for your project. The structure includes essential steps for data preparation, model execution, and licensing, and ensures a clean setup for new users.
-
-
-This version should correctly separate the code blocks and ensure that each code section has
