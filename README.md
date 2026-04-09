@@ -54,10 +54,14 @@ Enjoy accurate drivable area detection and physically-consistent risk assessment
 
 Qualitative comparison of drivable area estimation and occupancy detection under complex driving scenarios:
 
+![Overall Algorithm Framework Diagram](Overall%20Algorithm%20Framework%20Diagram.jpg)
+![Algorithm Architecture](assets/Algorithm%20Architecture.jpg)
 ![Experimental Results (1)](assets/Experimental%20results%20(1).jpg)
 ![Experimental Results (2)](assets/Experimental%20results%20(2).jpg)
+![Experimental Results (6)](assets/Experimental%20results%20(6).jpg)
+![Experimental Results (7)](assets/Experimental%20results%20(7).jpg)
 ![Experimental Results (4)](assets/Experimental%20results%20(4).jpg)
-![Algorithm Architecture](assets/Algorithm%20Architecture.jpg)
+![Experimental Results (8)](assets/Experimental%20results%20(8).jpg)
 ---
 
 ## License
