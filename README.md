@@ -34,18 +34,15 @@ Run the preprocessing script to format the labels for drivable area extraction:
 python src/data_utils.py --dataset_path ./data/
 ```
 
-### 2. Pre-trained Weights
-To enable immediate inference and ensure full reproducibility, we have included the pre-trained weights directly in this repository. 
-
-You can find the PyTorch weights (`best.pt`) and the exported ONNX model (`test.onnx`) inside the `model/` directory.
-
+### 2. Pre-trained Weights (Demo)
+Due to current NDA restrictions prior to official publication, full-scale weights cannot be released yet. However, to enable immediate inference verification, we have included a subset-trained PyTorch weight (best_demo.pt) and an exported ONNX model (test.onnx) inside the model/ directory.
 
 ### 3. Execute Inference
 
 For evaluation on the test set and generating occupancy grid results, run:
 
 ```bash
-python main.py --mode test --weights model/best.pt
+python main.py --mode test --weights model/best_demo.pt
 ```
 
 
