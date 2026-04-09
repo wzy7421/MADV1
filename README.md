@@ -34,17 +34,21 @@ Run the preprocessing script to format the labels for drivable area extraction:
 python src/data_utils.py --dataset_path ./data/
 ```
 
-### 2. Download Pre-trained Weights
-To enable immediate inference and ensure full reproducibility, we provide the pre-trained weights.  
-Download the `mad_best.pth` from [Insert Google Drive / Baidu Pan Link Here]  
-Place the downloaded file into the `weights/` directory.
+### 2. Pre-trained Weights
+To enable immediate inference and ensure full reproducibility, we have included the pre-trained weights directly in this repository. 
 
+You can find the PyTorch weights (`best.pt`) and the exported ONNX model (`test.onnx`) inside the `model/` directory. No external downloading (e.g., Google Drive) is required.
+
+
+
+```
 ### 3. Execute Inference
 For evaluation on the test set and generating occupancy grid results, run:
 
 ```bash
-python src/main.py --mode test --weights weights/mad_best.pth
-```
+python main.py --mode test --weights model/best.pt
+
+
 
 Enjoy accurate drivable area detection and physically-consistent risk assessment!
 
@@ -97,20 +101,19 @@ We would like to express our sincere gratitude to the open-source community, par
 The project is organized as follows:
 
 ```bash
-├── data/                          # Directory for datasets
-│   ├── SpaceNet/                  # SpaceNet dataset
-│   ├── DeepGlobe/                 # DeepGlobe dataset
-│   └── Cityscapes/                # Cityscapes dataset
-├── images/                        # Sample images and demo outputs
-├── models/                        # Network architectures (DeepLabV3+, Faster R-CNN)
-├── weights/                       # Directory for pre-trained .pth weights
-├── src/                           # Source code
-│   ├── main.py                    # Main script for training and evaluation
-│   ├── qwt_core.py                # Multi-Q Gabor Wavelet Transform & SRAP/MinIP projection
-│   └── data_utils.py              # Dataset loading and preprocessing scripts
-├── requirements.txt               # Python dependencies
-├── LICENSE                        # License file
-└── README.md                      # Project documentation
+├── datasets/                # Place downloaded SpaceNet/DeepGlobe datasets here
+├── assets/                  # Diagram assets and results
+├── images/                  # Sample images and demo outputs
+├── model/                   # Network architectures and Pre-trained Weights
+│   ├── faster_rcnn.py       # Detection architecture
+│   ├── best.pt              # Pre-trained PyTorch weights
+│   └── test.onnx            # Exported ONNX model
+├── main.py                  # Main script for training and evaluation
+├── qwt_core.py              # Multi-Q Gabor Wavelet Transform & SRAP/MinIP projection
+├── data_utils.py            # Dataset loading and preprocessing scripts
+├── requirements.txt         # Python dependencies
+├── LICENSE
+└── README.md
 ```
 
 ---
